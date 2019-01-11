@@ -1,1 +1,8 @@
 
+ssh root@ip ‘'命令' #如果命令中有符号需要注意
+
+#使用sshpass模块需要安装
+
+yum -y install sshpass
+
+sshpass -p 密码  ssh  -o StrictHostKeyChecking=no  root@ip  "命令"

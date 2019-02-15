@@ -1,0 +1,9 @@
+service NetworkManager stop
+ifconfig -a
+ifconfig ens33 up
+sudo dhclient ens33
+vim /etc/resolv.conf 
+最后一行添加  nameserver 114.114.114.114
+/etc/init.d/networking restart 
+ping www.baidu.com
+

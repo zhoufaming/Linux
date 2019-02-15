@@ -1,0 +1,20 @@
+ps -ef|grep ssh
+netstat -ntpl |grep 22
+查看是否安装了openssl-server服务
+如果都有 则开通防火墙 22号端口
+sudo ufw enable //开启防火墙
+sudo ufw allow 22 //开通22号端口
+
+否者
+安装openssl-server服务
+sudo apt-get install openssh-server
+root@ubuntu:/home/zfm/go/project# netstat -tnl 
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 127.0.0.1:63342         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:6942          0.0.0.0:*               LISTEN     
+tcp6       0      0 :::22                   :::*                    LISTEN     
+tcp6       0      0 ::1:631                 :::*                    LISTEN  

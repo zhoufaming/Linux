@@ -1,0 +1,8 @@
+sudo vim /etc/sudoers
+修改文件如下：
+# User privilege specification
+root ALL=(ALL) ALL
+用户名 ALL=(ALL) ALL
+
+：wq
+保存退出

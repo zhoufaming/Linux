@@ -1,0 +1,10 @@
+查看哪些图形界面可安装
+yum grouplist
+
+安装GNOME图形界面
+yum groupinstall  "GNOME Desktop" -y
+
+yum install xorg-x11-xauth
+
+打开xshell中对应连接ip的终端设置
+点击隧道 勾选xmanger
